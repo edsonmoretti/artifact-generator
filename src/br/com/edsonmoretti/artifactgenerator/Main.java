@@ -5,6 +5,8 @@
  */
 package br.com.edsonmoretti.artifactgenerator;
 
+import java.io.File;
+
 /**
  *
  * @author Edson Moretti
@@ -15,7 +17,13 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Configuration.database = "table";
+        Configuration.user = "root";
+        Configuration.password = "";
+        Configuration.server = "localhost:3313";
+        Configuration.packageName = "br.com.edsonmoretti.artifactgenerator.Models";
+
+        new ObjectBuilder().build("table");
+        
     }
-    
 }
